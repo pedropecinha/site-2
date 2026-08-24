@@ -1,0 +1,498 @@
+/* =========================
+   CONFIGURAÇÕES GERAIS
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f7f4ef;
+    color: #29231f;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    background: rgba(30, 22, 18, 0.95);
+    backdrop-filter: blur(10px);
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 18px 30px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #f2b84b;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.menu a {
+    color: white;
+    font-size: 0.95rem;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #f2b84b;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(20, 13, 10, 0.95),
+            rgba(20, 13, 10, 0.55),
+            rgba(20, 13, 10, 0.2)
+        ),
+        url("https://images.unsplash.com/photo-1504159506876-f8338247a14a?auto=format&fit=crop&w=1800&q=85");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+    padding: 120px 30px 70px;
+
+    color: white;
+}
+
+.tag {
+    color: #f2b84b;
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    max-width: 800px;
+    font-size: clamp(3rem, 7vw, 6rem);
+    line-height: 1;
+    margin-bottom: 25px;
+}
+
+.hero p:not(.tag) {
+    max-width: 650px;
+    font-size: 1.15rem;
+    color: #eee;
+}
+
+button {
+    margin-top: 30px;
+    padding: 15px 28px;
+
+    border: none;
+    border-radius: 30px;
+
+    background: #f2b84b;
+    color: #241a15;
+
+    font-weight: bold;
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+button:hover {
+    background: white;
+    transform: translateY(-3px);
+}
+
+
+/* =========================
+   SEÇÕES
+========================= */
+
+.section {
+    max-width: 1200px;
+    margin: auto;
+    padding: 100px 30px;
+}
+
+.section-title {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 50px;
+}
+
+.section-title span {
+    color: #b46b29;
+    font-weight: bold;
+}
+
+.section-title h2 {
+    font-size: 2.5rem;
+    color: #30231c;
+}
+
+.intro {
+    max-width: 700px;
+    margin-top: -30px;
+    margin-bottom: 40px;
+    color: #665b54;
+}
+
+
+/* =========================
+   SOBRE
+========================= */
+
+.sobre-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.sobre-grid h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.sobre-grid p {
+    margin-bottom: 20px;
+    color: #5f554e;
+}
+
+.quote {
+    padding: 40px;
+    background: #30231c;
+    color: white;
+    border-radius: 20px;
+    position: relative;
+}
+
+.quote span {
+    color: #f2b84b;
+    font-size: 5rem;
+    line-height: 0;
+}
+
+.quote p {
+    color: white;
+    font-size: 1.2rem;
+}
+
+
+/* =========================
+   CARDS
+========================= */
+
+.cards-section {
+    max-width: 100%;
+    background: #30231c;
+    color: white;
+}
+
+.cards-section .section-title {
+    max-width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cards-section .section-title h2 {
+    color: white;
+}
+
+.cards {
+    max-width: 1140px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.card {
+    padding: 30px;
+    border: 1px solid #5b493d;
+    border-radius: 18px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    background: #3b2c23;
+    border-color: #f2b84b;
+}
+
+.icon {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    color: #f2b84b;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #d8d0ca;
+}
+
+
+/* =========================
+   GALERIA
+========================= */
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+
+    border-radius: 16px;
+
+    transition: 0.4s;
+}
+
+.gallery img:hover {
+    transform: scale(1.03);
+    filter: brightness(0.8);
+}
+
+
+/* =========================
+   MENSAGEM
+========================= */
+
+.message-section {
+    padding: 100px 30px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #b46b29,
+            #7f3f1d
+        );
+}
+
+.message-box {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+    color: white;
+}
+
+.heart {
+    display: block;
+    font-size: 3rem;
+    color: #ffd77a;
+    margin-bottom: 15px;
+}
+
+.message-box h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.message-box p {
+    font-size: 1.15rem;
+}
+
+
+/* =========================
+   LINKS EXTERNOS
+========================= */
+
+.external-links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.external-links a {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+    padding: 25px;
+
+    background: white;
+    color: #30231c;
+
+    border-radius: 15px;
+
+    box-shadow: 0 8px 25px rgba(50, 30, 20, 0.08);
+
+    transition: 0.3s;
+}
+
+.external-links a:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(50, 30, 20, 0.15);
+}
+
+.external-links span {
+    font-size: 2rem;
+}
+
+.external-links strong,
+.external-links small {
+    display: block;
+}
+
+.external-links small {
+    color: #756960;
+    margin-top: 5px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #1d1511;
+    color: white;
+    padding: 60px 30px;
+    text-align: center;
+}
+
+.footer-content h2 {
+    color: #f2b84b;
+    margin-bottom: 10px;
+}
+
+.footer-content p {
+    color: #c9c0b9;
+}
+
+.copyright {
+    margin-top: 30px;
+    font-size: 0.8rem;
+}
+
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 900px) {
+
+    .menu {
+        gap: 15px;
+    }
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .external-links {
+        grid-template-columns: 1fr;
+    }
+
+    .sobre-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .navbar {
+        padding: 15px 20px;
+    }
+
+    .logo {
+        font-size: 1rem;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .hero-content {
+        padding: 120px 20px 60px;
+    }
+
+    .hero h1 {
+        font-size: 3.2rem;
+    }
+
+    .section {
+        padding: 70px 20px;
+    }
+
+    .section-title h2 {
+        font-size: 2rem;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+        padding: 0 20px;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery img {
+        height: 350px;
+    }
+
+    .message-box h2 {
+        font-size: 2.2rem;
+    }
+}
